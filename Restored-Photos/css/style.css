@@ -1,0 +1,258 @@
+/* reset browser styles */
+* {
+  box-sizing: border-box; 
+}
+html, body, div, h1, h2, h3, p, a, img, strong, ol, ul, li, caption, figure, figcaption, footer, header, nav {
+  border: 0;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+body {
+  background-color: #000;
+	background-image: url(images/marble1.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  background-color: #7f0000;
+  height: 100%;
+  margin: auto;
+  width: 85%;
+}
+
+header {
+  background-color: #989898; 
+	border: 5px solid #7f0000;
+  border-bottom: none;
+}
+
+h1 {
+	font-family: 'PT Serif', serif;
+  font-size: 6rem;
+  height: 100%;
+  padding: 30px 0 30px 0;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'PT Serif', serif;
+  font-size: 1.75rem;
+}
+
+main {
+  border: 5px solid #7f0000;
+}
+
+.navbar {
+  -webkit-justify-content: space-between;
+  background-color: #000;
+  border-bottom: border: 5px solid #7f0000;
+  display: block;
+  
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+}
+
+.navbar a {
+  color: #989898;
+  float: left;
+  font-family: Roboto;
+  font-size: 1.5rem;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  width: 14.285%;
+}
+
+li {
+display: block;
+}
+
+li a {
+  border-right: 2px solid #7f0000;
+  color: #989898;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #989898;
+  color: #000;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: #fff;
+}
+
+li:last-child {
+  border-right: none; 
+}
+
+.nav, .boxes, .footer, .footer form{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.container {
+  background-color: #7f0000;
+  border-bottom: 5px solid #7f0000;
+  color: #fff;
+  font-size: 1.5em;
+  padding: 25px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap; /* IE10 */
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sit next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  -ms-flex: 25%; /* IE10 */
+  padding: 0 4px;
+}
+
+.column img {
+  background-color: #fff;
+  vertical-align: middle;
+}
+
+.attract {
+  border: 5px solid #989898;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 20px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+    }
+}
+
+div.desc {
+  background-color: #fff;
+  font-family: Georgia, serif;
+  padding: 10px;
+  text-align: center;
+}
+
+.attract {
+  background-color: #fff;
+}
+
+.responsive {
+  float: left;
+  padding: 0 6px;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+  .responsive {
+    margin: 6px 0;
+    width: 49.99999%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+  .responsive {
+    width: 100%;
+    }
+}
+
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+footer {
+  background-color: #989898;
+  padding: 20px 20px 20px 25px;
+}
+
+footer, footer a{
+  color: #000;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.row {
+  display: block;
+  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.column {
+  float: left;
+  padding: 25px;
+  width: 25%;
+}
+
+.row::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+  .navbar {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+}
+
+@media (min-width: 481px) and (max-width:768px) {
+  .columnWrapper {
+      width: auto;
+  }
+  .row {
+    border-right: none;
+  }
+}
+
+@media (max-width:480px) {
+  .columnWrapper, .row {
+    float: none;
+    width: auto;
+  }
+}
